@@ -24,10 +24,17 @@ export function Header() {
                 <div className="flex justify-center m-auto self-center">
                     <SearchBar />
                 </div>
-                <div className="h-10 flex self-center items-center justify-center gap-[28px] mr-[28px]">
-                    <LuArrowUpFromLine className="text-white w-[17px] h-[17px]" />
-                    <HiOutlineBell className="text-white w-[23px] h-[23px]" />
-                    <div className={`bg-[url("/Eu.jpg")] w-[35px] h-[35px] bg-cover rounded-full bg-center`}></div>
+                <div className="h-10 flex self-center items-center justify-center gap-[10px] mr-[28px]">
+
+                    <div className="w-[40px] h-[40px] rounded-full hover:bg-[#3D3D3D] content-center place-items-center cursor-pointer">
+                        <LuArrowUpFromLine className="text-white w-[17px] h-[17px]" />
+                    </div>
+
+                    <div className="w-[40px] h-[40px] rounded-full hover:bg-[#3D3D3D] content-center place-items-center cursor-pointer">
+                        <HiOutlineBell className="text-white w-[23px] h-[23px]" />
+                    </div>
+
+                    <div className={`bg-[url("/Eu.jpg")] w-[35px] h-[35px] ml-[10px] bg-cover rounded-full bg-center cursor-pointer`}></div>
                 </div>
             </div>
         </div>

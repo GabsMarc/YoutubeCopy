@@ -14,9 +14,9 @@ export function SearchBar() {
 
     return (
 
-        <div className="flex w-[720px] justify-end mr-[50px]">
+        <div className="flex w-[720px] justify-end mr-[40px]">
 
-            <div className={`flex bg-transparent pl-[18px] text-white h-[40px] border-[1px] rounded-l-[30px] ${isActive ? "border-[#1C62B9]" : "border-[#282828]"}`}
+            <div className={`flex bg-transparent pl-[15px] text-white h-[40px] border-[1px] rounded-l-[30px] ${isActive ? "border-[#1C62B9]" : "border-[#282828]"}`}
                 tabIndex={0}
                 onFocus={() => setIsActive(true)}
                 onBlur={() => setIsActive(false)}
@@ -41,7 +41,7 @@ export function SearchBar() {
                 </div>
 
             </div>
-            <div className="w-[60px] h-[40px] bg-[#222222] rounded-r-[30px] content-center place-items-center cursor-pointer border-[1px] border-[#282828]">
+            <div className="w-[62px] h-[40px] bg-[#222222] rounded-r-[30px] content-center place-items-center cursor-pointer border-[1px] border-[#282828]">
                 <CiSearch className="text-white w-[24px] h-[24px]" />
             </div>
 
