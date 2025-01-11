@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Header } from "../components/Header"
+import { SideBar } from "@/components/Sidebar";
 
 
 export default function RootLayout({
@@ -10,7 +11,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <Header/> */}
+        <SideBar />
+        <Header />
         {children}
       </body>
     </html>

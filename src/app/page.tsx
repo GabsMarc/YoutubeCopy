@@ -7,8 +7,9 @@ export default function Home() {
   return (
     <div className="bg-black h-[900px] ">
 
-      <SideBar />
-      <Header />
+      <div className="bg-[#0F0F0F] h-full">
+
+      </div>
 
     </div>
   )
