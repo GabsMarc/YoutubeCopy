@@ -8,12 +8,19 @@ import { HiOutlineBell } from "react-icons/hi";
 import { SideBar } from "../Sidebar";
 
 
-export function Header() {
+interface IHeaderProps{
+    open:(value: boolean) => void
+}
+
+
+export function Header({ open }: IHeaderProps) {
     return (
         <div>
-            <div className="w-[100vw] h-[56px] bg-[#0F0F0F] flex px-4 fixed ">
+            <div className="w-[100vw] h-[56px] bg-[#0F0F0F] flex px-4 fixed">
                 <div className="flex gap-4 items-center">
-                    <div className="w-10 h-10 content-center justify-items-center rounded-full hover:bg-[#f0f0f01d] hover:cursor-pointer">
+                    <div className="w-10 h-10 content-center justify-items-center rounded-full hover:bg-[#f0f0f01d] hover:cursor-pointer"
+                        onClick={() => open(false)}
+                    >
                         <HiBars3 className="w-[25px] h-[25px] text-white" />
                     </div>
                     <a href="/">

@@ -41,6 +41,7 @@ export function SearchBar() {
                 </div>
 
             </div>
+
             <div className="w-[62px] h-[40px] bg-[#222222] rounded-r-[30px] content-center place-items-center cursor-pointer border-[1px] border-[#282828]">
                 <CiSearch className="text-white w-[24px] h-[24px]" />
             </div>
