@@ -4,13 +4,18 @@ type SideBarType = {
     children: React.ReactNode
 }
 
-export const SideBarContext = createContext({})
+type SideBarContextProps = {
+    sideBarType: boolean,
+    HandleSideBar: (value: boolean) => void
+}
+
+export const SideBarContext = createContext<SideBarContextProps>({} as SideBarContextProps)
 
 export const SideBarProvider = ({ children }: SideBarType) => {
 
     const [sideBarType, setSideBarType] = useState(true)
 
-
+    
     function HandleSideBar(value: boolean) {
         if (sideBarType === true) {
             setSideBarType(value)
@@ -24,7 +29,6 @@ export const SideBarProvider = ({ children }: SideBarType) => {
     return (
         <SideBarContext.Provider value={{
             sideBarType,
-            setSideBarType,
             HandleSideBar
         }}>
             <>

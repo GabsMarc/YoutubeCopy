@@ -1,20 +1,20 @@
 "use client"
 
 
+import { SideBarContext } from "@/contexts/SideBar/Index";
 import SideClose from "./Components/SideClose";
 import SideOpen from "./Components/SideOpen";
-
-
-interface ISideBarProps {
-    open: boolean
-}
+import { useContext } from "react";
 
 
 
-export function SideBar({ open }: ISideBarProps) {
+export function SideBar(){
+
+    const { sideBarType } = useContext(SideBarContext)
+    
     return (
         <>
-            {open ? <SideOpen /> : <SideClose/>}
+            {sideBarType ? <SideOpen /> : <SideClose/>}
         </>
     )
 

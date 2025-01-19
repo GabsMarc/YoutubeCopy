@@ -3,30 +3,20 @@
 import "./globals.css";
 import { Header } from "../components/Header"
 import { SideBar } from "@/components/Sidebar";
-import { useState } from "react";
+import { SideBarProvider } from "@/contexts/SideBar/Index";
+
 
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 
-  const [sideBarType, setSideBarType] = useState(true)
-
-
-  function HandleSideBar(value: boolean) {
-    if(sideBarType === true) {
-      setSideBarType(value) 
-    }
-    else {
-      setSideBarType(!value)
-    }
-  }
-  
-
   return (
     <html lang="en">
       <body>
-        <SideBar open={sideBarType} />
-        <Header open={(value) => HandleSideBar(value)} />
-        {children}
+        <SideBarProvider>
+          <SideBar />
+          <Header />
+          {children}
+        </SideBarProvider>
       </body>
     </html>
   );

@@ -5,26 +5,27 @@ import Image from "next/image"
 import { SearchBar } from "../SearchBar";
 import { LuArrowUpFromLine } from "react-icons/lu";
 import { HiOutlineBell } from "react-icons/hi";
-import { SideBar } from "../Sidebar";
+import { useContext } from "react";
+import { SideBarContext } from "@/contexts/SideBar/Index";
 
 
-interface IHeaderProps{
-    open:(value: boolean) => void
-}
+export function Header() {
 
 
-export function Header({ open }: IHeaderProps) {
+    const { HandleSideBar } = useContext(SideBarContext)
+
+
     return (
         <div>
             <div className="w-[100vw] h-[56px] bg-[#0F0F0F] flex px-4 fixed">
                 <div className="flex gap-4 items-center">
                     <div className="w-10 h-10 content-center justify-items-center rounded-full hover:bg-[#f0f0f01d] hover:cursor-pointer"
-                        onClick={() => open(false)}
+                        onClick={() => HandleSideBar(false)}
                     >
                         <HiBars3 className="w-[25px] h-[25px] text-white" />
                     </div>
                     <a href="/">
-                        <span className="fixed left-[165px] top-[10px] text-[10px] text-[#AAAAAA]">BR</span>
+                        <span className="fixed left-[165px] top-[10px] text-[10px] text-[#AAAAAA] select-none">BR</span>
                         <Image src="/Youtube-white-logo.png" alt="Youtube Logo" width={91} height={0} className="" />
                     </a>
                 </div>
