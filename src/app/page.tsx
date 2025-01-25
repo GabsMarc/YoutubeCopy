@@ -10,8 +10,17 @@ export default function Home() {
 
   return (
 
-    <div className={`bg-[#553636] w-[100vw] h-[1000px] pt-[100px] ${sideBarType === true ? 'pl-[300px]' : 'pl-[100px]'} `}>
-      <Card />
+    <div className={`bg-[#0F0F0F] w-[100vw] h-[1000px] pt-[135px] ${sideBarType === true ? 'pl-[265px]' : 'pl-[100px]'}`}>
+      <div className="flex gap-4 flex-wrap justify-items-start">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </div>
 
   )
