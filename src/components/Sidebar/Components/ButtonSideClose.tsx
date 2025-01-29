@@ -38,7 +38,7 @@ export default function ButtonSideClose() {
         <div className="mt-[63px]">
 
             {ButtonOptions.map((option) => (
-                <div key={option.id} className="w-[64px] h-[73px] rounded-[10px] hover:bg-[#272727] flex flex-col justify-center items-center">
+                <div key={option.id} className="w-[64px] h-[73px] rounded-[10px] hover:bg-[#272727] flex flex-col justify-center items-center cursor-pointer">
                     {option.icon}
                     {option.title}
                 </div>

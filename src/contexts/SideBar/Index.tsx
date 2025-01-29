@@ -15,7 +15,7 @@ export const SideBarProvider = ({ children }: SideBarType) => {
 
     const [sideBarType, setSideBarType] = useState(true)
 
-    
+
     function HandleSideBar(value: boolean) {
         if (sideBarType === true) {
             setSideBarType(value)
@@ -24,6 +24,7 @@ export const SideBarProvider = ({ children }: SideBarType) => {
             setSideBarType(!value)
         }
     }
+
 
 
     return (
