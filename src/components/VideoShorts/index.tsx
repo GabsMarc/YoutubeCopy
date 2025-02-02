@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { SideBarContext } from "@/contexts/SideBar/Index"
 import { useContext } from "react"
@@ -14,13 +14,12 @@ export function Shorts() {
 
     return (
         <div className={`mb-4  ${sideBarType === true ? "w-[249px]" : "w-[277px]"}`}>
-            <div className={`bg-black rounded-[10px] ${sideBarType === true ? "w-[249px] h-[441px]" : "w-[277px] h-[491px]"} `}></div>
+            <div className={`bg-[#3F3F3F] rounded-[10px] ${sideBarType === true ? "w-[249px] h-[441px]" : "w-[277px] h-[491px]"} `}></div>
             <div className="flex">
                 <div className="pt-1 pl-1 flex flex-col">
                     <p className="h-[45px] text-[#f1f1f1] text-[17px] font-medium leading-[23px] overflow-hidden">Testando o titulo do video aqui do meu youtube! Testando o titulo do video aqui do meu youtube</p>
-                    <div className="text-[14px] text-[#9BAA9B] leading-[18px] pt-1">
-                        <p>{vizualization.toFixed()} mil visualizações ° há 2 dias</p>
-                    </div>
+                    <p className="text-[15px] text-[#9BAA9B] leading-[18px] pt-1">{vizualization.toFixed()} mil visualizações</p>
+
                 </div>
                 <div className="flex flex-col p-1">
 
