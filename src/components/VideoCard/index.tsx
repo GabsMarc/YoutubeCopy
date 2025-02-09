@@ -18,7 +18,7 @@ export function Card() {
                     <div className="bg-[url(/Eu.jpg)] rounded-full w-[40px] h-[40px] bg-cover bg-center" />
                 </div>
                 <div className="overflow-hidden">
-                    <p className=" text-[#f1f1f1] text-[17px] font-medium leading-[23px]">Testando o titulo do video aqui do meu youtube!</p>
+                    <p className=" text-[#f1f1f1] text-[17px] font-medium leading-[23px]">Título aleatório do video aqui do meu youtube!</p>
                     <div className="text-[15px] text-[#9BAA9B] leading-[20px] pt-1">
                         <p className="hover:text-white cursor-pointer">Canal Gabriel Marcucci</p>
                         <p>{vizualization.toFixed()} mil visualizações ° há 2 dias</p>
